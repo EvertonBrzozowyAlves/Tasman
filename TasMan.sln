@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91826BAD-A8B2-494B-99D4-B9C13FDA64B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{9FA735B8-3E94-460C-BEE1-EFCDD25E11B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{939E8A0D-1543-4B08-A32C-BF2E56E50973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasman.API", "src\services\api\Tasman.API\Tasman.API.csproj", "{CBFC297A-279B-4543-8815-E07938660DF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBFC297A-279B-4543-8815-E07938660DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBFC297A-279B-4543-8815-E07938660DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBFC297A-279B-4543-8815-E07938660DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBFC297A-279B-4543-8815-E07938660DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FA735B8-3E94-460C-BEE1-EFCDD25E11B9} = {91826BAD-A8B2-494B-99D4-B9C13FDA64B1}
+		{939E8A0D-1543-4B08-A32C-BF2E56E50973} = {9FA735B8-3E94-460C-BEE1-EFCDD25E11B9}
+		{CBFC297A-279B-4543-8815-E07938660DF1} = {939E8A0D-1543-4B08-A32C-BF2E56E50973}
+	EndGlobalSection
+EndGlobal
