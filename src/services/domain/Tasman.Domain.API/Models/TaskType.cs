@@ -1,4 +1,4 @@
-namespace Tasman.API.Models;
+namespace Tasman.Domain.API.Models;
 
 public class TaskType : Entity
 {

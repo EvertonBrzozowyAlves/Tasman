@@ -1,4 +1,4 @@
-namespace Tasman.API.Models;
+namespace Tasman.Domain.API.Models;
 
 public class Task : Entity
 {
@@ -10,10 +10,10 @@ public class Task : Entity
 
    public Task(Guid userId, TaskType taskType, string? description, DateTime startedAt, DateTime? finishedAt)
    {
-        UserId = userId;
-        TaskType = taskType;
-        Description = description;
-        StartedAt = startedAt;
-        FinishedAt = finishedAt;
+      UserId = userId;
+      TaskType = taskType;
+      Description = description;
+      StartedAt = startedAt;
+      FinishedAt = finishedAt;
    }
 }
