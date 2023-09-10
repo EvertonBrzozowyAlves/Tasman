@@ -1,15 +1,10 @@
-using Tasman.Domain.API.Models;
+using Tasman.Shared.Library.Models;
 
-namespace Tasman.Domain.API.Data.Models;
+namespace Tasman.Domain.API.Models;
 
 public class TaskType : Entity
 {
     public string Name { get; set; }
-
-    //EF
-    protected TaskType()
-    {
-    }
 
     public TaskType(Guid createdBy, string name)
     {

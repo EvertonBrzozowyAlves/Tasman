@@ -1,0 +1,26 @@
+name: Tasman Test
+
+on:
+  workflow_run:
+    workflows: ["Tasman Build"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  build-apps:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore
+
+    - name: Test
+      run: dotnet test

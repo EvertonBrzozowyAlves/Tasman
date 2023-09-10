@@ -1,6 +1,6 @@
-using Tasman.Domain.API.Models;
+using Tasman.Shared.Library.Models;
 
-namespace Tasman.Domain.API.Data.Models;
+namespace Tasman.Domain.API.Models;
 
 public class Task : Entity
 {
@@ -8,11 +8,6 @@ public class Task : Entity
     public string Description { get; set; }
     public DateTime StartedAt { get; set; }
     public DateTime? FinishedAt { get; set; }
-
-    //EF
-    protected Task()
-    {
-    }
 
     public Task(Guid createdBy, Guid taskTypeId, string description, DateTime startedAt)
     {

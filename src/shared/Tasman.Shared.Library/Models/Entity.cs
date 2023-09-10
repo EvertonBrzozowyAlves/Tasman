@@ -1,4 +1,4 @@
-namespace Tasman.Domain.API.Models;
+namespace Tasman.Shared.Library.Models;
 
 public abstract class Entity
 {
