@@ -2,14 +2,16 @@ namespace Tasman.Domain.API.Models;
 
 public abstract class Entity
 {
-    protected Guid Id { get; set; }
-    protected DateTime CreatedAt { get; set; }
-    protected bool IsDeleted { get; set; }
+    public Guid Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public bool IsDeleted { get; set; }
+    public Guid? CreatedBy { get; set; }
 
-    public Entity()
+    public Entity(Guid? createdBy = null)
     {
-       Id = Guid.NewGuid();
-       CreatedAt = DateTime.UtcNow;
-       IsDeleted = false; 
+        Id = Guid.NewGuid();
+        CreatedAt = DateTime.UtcNow;
+        IsDeleted = false;
+        CreatedBy = createdBy;
     }
 }

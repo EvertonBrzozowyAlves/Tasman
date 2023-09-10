@@ -1,31 +1,33 @@
-﻿namespace Tasman.Shared.Library;
+﻿namespace Tasman.Shared.Library.Models;
 
-public class ApiResponse
+public class ApiResponse<T>
 {
     public bool Succeeded { get; private set; }
-    public object? Data { get; init; }
-    public List<string>? Errors { get; init; }
+    public T? Data { get; init; }
+    public List<string>? Errors { get; init; } = new List<string>();
 
     public ApiResponse()
     {
+        Data = default;
         Succeeded = true;
     }
 
-    public ApiResponse(object? data)
+    public ApiResponse(T? data)
     {
-        Succeeded = true;
         Data = data;
+        Succeeded = true;
     }
 
     public ApiResponse(string error)
     {
+        Data = default;
         Succeeded = false;
-        Errors ??= new List<string>();
         Errors.Add(error);
     }
 
     public ApiResponse(List<string> errors)
     {
+        Data = default;
         Succeeded = false;
         Errors = errors;
     }

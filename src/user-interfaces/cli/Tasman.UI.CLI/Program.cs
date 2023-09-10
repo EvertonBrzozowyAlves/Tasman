@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Tasman.UI.CLI;
+
+public class Tasman
+{
+    public static int Main(string[] args) 
+    {
+        Console.WriteLine("work in progress...");
+        return 0;
+    }
+}
