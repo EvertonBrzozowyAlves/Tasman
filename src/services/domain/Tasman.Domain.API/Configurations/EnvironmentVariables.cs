@@ -7,8 +7,10 @@ public static class EnvironmentVariables
 {
     public static string WriteDatabaseConnectionString => "TASMAN_DOMAIN_API_WRITE_DATABASE_CONNECTION_STRING";
     public static string ReadDatabaseConnectionString => "TASMAN_DOMAIN_API_READ_DATABASE_CONNECTION_STRING";
-    
-    public static IServiceCollection AddEnvironmentVariables(this IServiceCollection services, IWebHostEnvironment environment) 
+    public static string DiscordWebhookId => "TASMAN_DOMAIN_API_DISCORD_WEBHOOK_ID";
+    public static string DiscordWebhookToken => "TASMAN_DOMAIN_API_DISCORD_WEBHOOK_TOKEN";
+
+    public static IServiceCollection AddEnvironmentVariables(this IServiceCollection services, IWebHostEnvironment environment)
     {
         try
         {

@@ -1,6 +1,5 @@
 using Tasman.Domain.API.Controllers;
 
-
 namespace Tasman.Domain.API.Tests;
 
 public class TaskTypesControllerTests
@@ -9,10 +8,10 @@ public class TaskTypesControllerTests
     public async void TaskTypes_GetAllTasks_ShouldReturnActiveTasksForTheLoggedUser()
     {
         //Arrange
-        var taskTypesController = new TaskTypesController();
+        TaskTypesController taskTypesController = new TaskTypesController();
 
         //Act
-        var result = await taskTypesController.GetAllTasks();
+        Microsoft.AspNetCore.Mvc.IActionResult result = await taskTypesController.GetAllTasks();
 
         //Assert
         //TODO: finalizar!

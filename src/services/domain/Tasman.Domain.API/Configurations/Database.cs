@@ -1,5 +1,3 @@
-//using Microsoft.EntityFrameworkCore;
-
 namespace Tasman.Domain.API.Configurations;
 
 public static class Database
