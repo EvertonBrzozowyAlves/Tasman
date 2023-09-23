@@ -1,17 +1,13 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
-using Tasman.Shared.Library;
+using Tasman.Shared.Library.Models;
 
-namespace TechBox.Api.Controllers;
+namespace Tasman.Domain.API.Controllers;
 
 [ApiController]
 [Route("api/tasks")]
 public class TasksController : ControllerBase
 {
-    public TasksController()
-    {
-    }
-
     /// <summary>
     /// Get all tasks
     /// </summary>
@@ -20,12 +16,10 @@ public class TasksController : ControllerBase
     [HttpGet("")]
     [Consumes("application/json")]
     [Produces("application/json")]
-    [ProducesResponseType(typeof(ApiResponse), (int)HttpStatusCode.OK)]
-    [ProducesResponseType(typeof(ApiResponse), (int)HttpStatusCode.InternalServerError)]
+    [ProducesResponseType(typeof(ApiResponse<List<string>>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(ApiResponse<List<string>>), (int)HttpStatusCode.InternalServerError)]
     public async Task<IActionResult> GetAllTasks()
     {
-        //var storedFiles = await _taskRepository.ListFilesAsync();
-
-        return Ok(new ApiResponse());
+        return Ok(new ApiResponse<List<string>>());
     }
 }

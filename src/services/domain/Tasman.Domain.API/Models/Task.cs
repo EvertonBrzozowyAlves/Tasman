@@ -1,19 +1,19 @@
+using Tasman.Shared.Library.Models;
+
 namespace Tasman.Domain.API.Models;
 
 public class Task : Entity
 {
-   private Guid UserId { get; set; } 
-   private TaskType TaskType { get; set; }
-   private string? Description { get; set; }
-   private DateTime StartedAt { get; set; }
-   private DateTime? FinishedAt { get; set; }
+    public Guid TaskTypeId { get; set; }
+    public string Description { get; set; }
+    public DateTime StartedAt { get; set; }
+    public DateTime? FinishedAt { get; set; }
 
-   public Task(Guid userId, TaskType taskType, string? description, DateTime startedAt, DateTime? finishedAt)
-   {
-      UserId = userId;
-      TaskType = taskType;
-      Description = description;
-      StartedAt = startedAt;
-      FinishedAt = finishedAt;
-   }
+    public Task(Guid createdBy, Guid taskTypeId, string description, DateTime startedAt)
+    {
+        CreatedBy = createdBy;
+        TaskTypeId = taskTypeId;
+        Description = description;
+        StartedAt = startedAt;
+    }
 }

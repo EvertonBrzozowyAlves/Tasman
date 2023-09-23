@@ -478,3 +478,6 @@ $RECYCLE.BIN/
 
 # Environment variable files
 .env
+
+# Database administration scripts
+**/sql/Database
