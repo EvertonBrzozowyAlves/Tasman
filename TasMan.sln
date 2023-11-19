@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{33B02552-72F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{F8BD6298-C80A-4CF0-AB45-BFE4A2F4D4FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasman.Shared.Library", "src\shared\Tasman.Shared.Library\Tasman.Shared.Library.csproj", "{F2B7C1E4-74B3-46C5-B2F2-CED1A93574C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasman.Shared.Library", "src\shared\Tasman.Shared.Library\Tasman.Shared.Library.csproj", "{F2B7C1E4-74B3-46C5-B2F2-CED1A93574C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{D3BF27DF-D6FD-49DC-9CC8-316877FCE2B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{9D2B61C1-0FF3-48E2-972A-F55DBE7F6570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasman.Domain.API", "src\services\domain\Tasman.Domain.API\Tasman.Domain.API.csproj", "{AD092F8A-A69F-40A1-9A1A-B6130CEDF1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasman.Domain.API", "src\services\domain\Tasman.Domain.API\Tasman.Domain.API.csproj", "{AD092F8A-A69F-40A1-9A1A-B6130CEDF1A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B46B6630-B307-473E-A1C1-7D013975BBB6}"
 EndProject
@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{B8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{BF0D65F7-9030-4DEB-AFDA-F5E496C2BFA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasman.Domain.API.Tests", "tests\services\domain\Tasman.Domain.API.Tests\Tasman.Domain.API.Tests.csproj", "{4BB6F27C-E568-4EFE-AE79-E148D7358CB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasman.Domain.API.Tests", "tests\services\domain\Tasman.Domain.API.Tests\Tasman.Domain.API.Tests.csproj", "{4BB6F27C-E568-4EFE-AE79-E148D7358CB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

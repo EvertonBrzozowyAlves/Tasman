@@ -1,6 +1,7 @@
 {
     "files.exclude": {
         "**/.git": false,
+        "**/.idea": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "**/bin": true,
