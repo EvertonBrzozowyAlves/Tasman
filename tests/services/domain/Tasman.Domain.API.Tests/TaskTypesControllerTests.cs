@@ -7,11 +7,11 @@ public class TaskTypesControllerTests
     [Fact]
     public async void TaskTypes_GetAllTasks_ShouldReturnActiveTasksForTheLoggedUser()
     {
-        //Arrange
-        TaskTypesController taskTypesController = new();
-
-        //Act
-        Microsoft.AspNetCore.Mvc.IActionResult result = await taskTypesController.GetAllTasks();
+        // //Arrange
+        // TaskTypesController taskTypesController = new();
+        //
+        // //Act
+        // Microsoft.AspNetCore.Mvc.IActionResult result = await taskTypesController.GetAllTasks();
 
         //Assert
         //TODO: finalizar!

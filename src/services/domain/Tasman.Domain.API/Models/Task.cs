@@ -8,6 +8,8 @@ public class Task : Entity
     public string Description { get; set; }
     public DateTime StartedAt { get; set; }
     public DateTime? FinishedAt { get; set; }
+    
+    public TaskType TaskType { get; set; }
 
     public Task(Guid createdBy, Guid taskTypeId, string description, DateTime startedAt)
     {
@@ -15,5 +17,9 @@ public class Task : Entity
         TaskTypeId = taskTypeId;
         Description = description;
         StartedAt = startedAt;
+    }
+
+    protected Task()
+    {
     }
 }

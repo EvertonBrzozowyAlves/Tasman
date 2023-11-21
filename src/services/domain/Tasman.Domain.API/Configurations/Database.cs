@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Tasman.Domain.API.Data;
+
 namespace Tasman.Domain.API.Configurations;
 
 public static class Database
@@ -5,21 +8,27 @@ public static class Database
     public static IServiceCollection ConfigureDatabase(this IServiceCollection services)
     {
         var writeDatabaseConnectionString = Environment.GetEnvironmentVariable(EnvironmentVariables.WriteDatabaseConnectionString);
+        
+        //TODO: configure the read database
         var readDatabaseConnectionString = Environment.GetEnvironmentVariable(EnvironmentVariables.ReadDatabaseConnectionString);
 
-        // if (string.IsNullOrWhiteSpace(connectionString))
-        // {
-        //     throw new ApplicationException("Undefined Database Connection String. Please check the Environment Variables.");
-        // }
+        services.AddDbContext<WriteDbContext>(options =>
+        {
+            options.UseSqlServer(writeDatabaseConnectionString, assembly =>
+                assembly.MigrationsAssembly(typeof(WriteDbContext).Assembly.FullName)
+                        .EnableRetryOnFailure(maxRetryCount: 2, maxRetryDelay: TimeSpan.FromSeconds(2), errorNumbersToAdd: null)
+                        .MigrationsHistoryTable("_AppliedMigrations"));
+        });
 
-        // services.AddDbContext<ApplicationDbContext>(options =>
+        // services.AddEventStoreClient(clientSettings =>
         // {
-        //     options.UseSqlServer(connectionString, assembly =>
-        //         assembly.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
-        //                 .EnableRetryOnFailure(maxRetryCount: 2, maxRetryDelay: TimeSpan.FromSeconds(2), errorNumbersToAdd: null)
-        //                 .MigrationsHistoryTable("_AppliedMigrations"));
+        //     clientSettings.ConnectivitySettings = new EventStoreClientConnectivitySettings
+        //     {
+        //         // Address = new Uri("http://host.docker.internal:2113?tls=false"), Insecure = true
+        //         Address = new Uri("https://localhost:2113?tls=false"), Insecure = true
+        //     };
         // });
-
+        
         return services;
     }
 }
