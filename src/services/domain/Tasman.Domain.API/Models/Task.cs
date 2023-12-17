@@ -11,15 +11,12 @@ public class Task : Entity
     
     public TaskType TaskType { get; set; }
 
-    public Task(Guid createdBy, Guid taskTypeId, string description, DateTime startedAt)
+    public Task(Guid createdBy, Guid taskTypeId, string description, DateTime startedAt, TaskType taskType)
     {
         CreatedBy = createdBy;
         TaskTypeId = taskTypeId;
         Description = description;
         StartedAt = startedAt;
-    }
-
-    protected Task()
-    {
+        TaskType = taskType;
     }
 }

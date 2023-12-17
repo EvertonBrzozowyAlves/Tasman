@@ -1,8 +1,8 @@
-﻿using Tasman.Domain.API.Models;
+﻿using Tasman.Shared.Library.Aggregates;
 
-namespace Tasman.Domain.API.EventStore;
+namespace Tasman.Shared.Library.Events;
 
-public class TaskTypeNameUpdatedEvent : IEventStoreEntity<TaskType>
+public class TaskTypeUpdatedEvent : IEvent<TaskType>
 {
     public Guid Id { get; set; }
     public DateTime CreatedAt { get; set; }
@@ -14,9 +14,4 @@ public class TaskTypeNameUpdatedEvent : IEventStoreEntity<TaskType>
     {
         return $"{nameof(TaskType)}-{Id}";
     }
-}
-
-//markup interface
-public interface IEventStoreEntity<T>
-{
 }

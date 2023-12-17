@@ -2,5 +2,5 @@
 
 public class UpdateTaskTypeRequest
 {
-    public string newName { get; set; } = String.Empty;
+    public string NewName { get; set; } = String.Empty;
 }
